@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividades</title>
+</head>
+<body>
+  <h1>Lista de Actividades</h1>
+  <a href="/actividades/añadir">Agregar Actividad</a>
+  <ul>
+    <% actividades.forEach(Actividad => { %>
+      <li>
+        <%= Actividad.nombre %> - <%= Actividad.descripcion %>
+        <a href="/actividades/editar/<%= Actividad.id %>">Editar</a>
+        <a href="/actividades/eliminar/<%= Actividad.id %>">Eliminar</a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar Actividad</title>
+</head>
+<body>
+  <h1>Agregar Actividad</h1>
+  <form action="/actividades/crear" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" nombre="nombre" required>
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" nombre="descripcion" required></textarea>
+    <label for="habitoId">ID del Hábito:</label>
+    <input type="number" id="habitoId" nombre="habitoId" required>
+    <button type="submit">Guardar</button>
+  </form>
+</body>
+</html>
