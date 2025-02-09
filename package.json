@@ -1,0 +1,22 @@
+{
+  "name": "gestion-tiempo",
+  "version": "1.0.0",
+  "description": "aplicacion gestion del tiempo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ernestojrm08/gestion-tiempo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ernestojrm08/gestion-tiempo/issues"
+  },
+  "homepage": "https://github.com/ernestojrm08/gestion-tiempo#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
