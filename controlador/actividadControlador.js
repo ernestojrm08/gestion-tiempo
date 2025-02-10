@@ -1,67 +1,41 @@
 class actividadControlador {
-
-    static list(req, res) {
-      const actividades = [
-        { id: 1, nombre: 'Correr', descripcion: 'Correr 5 km', habitoId: 1 },
-        { id: 2, nombre: 'Leer', descripcion: 'Leer un libro', habitoId: 2 },
+    constructor() {
+      this.actividades = [
+        { id: 1, nombre: 'Correr' , descripcion: 'Correr 5km'},
+        { id: 2, nombre: 'Leer', descripcion: 'Leer un libro'},
       ];
-  
-      res.render('actividades/actividades', { actividades });
     }
   
-    
-    static add(req, res) {
-      res.render('actividades/añadirActividad');
+    listarActividades() {
+      return { actividades: this.actividades };
     }
   
-   
-    static create(req, res) {
-      const { nombre, descripcion, habitoId } = req.body;
+    agregarActividad(actividad) {
       const nuevaActividad = {
-        id: Date.now(), 
-        nombre,
-        descripcion,
-        habitoId: parseInt(habitoId), 
+        id: parseInt(Date.now()), // <-- Convierte a número entero
+        nombre: actividad.nombre,
+        descripcion: actividad.descripcion,
       };
-      console.log('Nueva actividad creada:', nuevaActividad);
-      res.redirect('/actividades');
+      this.actividades.push(nuevaActividad);
     }
   
-    
-    static edit(req, res) {
-      const actividadId = parseInt(req.params.id); 
-      const actividad = {
-        id: actividadId,
-        nombre: 'Ejemplo de actividad',
-        descripcion: 'Descripción de ejemplo',
-        habitoId: 1,
-      };
-      res.render('actividades/editarActividad', { actividad });
+    obtenerActividad(id) {
+      return this.actividades.find(actividad => actividad.id == id);
     }
   
-   
-    static update(req, res) {
-      const actividadId = parseInt(req.params.id); 
-      const { nombre, descripcion, habitoId } = req.body;
-      if (!nombre || !descripcion || !habitoId) {
-        return res.status(400).send('Todos los campos son obligatorios');
+    actualizarActividad(id, actividad) {
+      const index = this.actividades.findIndex(actividad => actividad.id == id);
+      if (index !== -1) {
+        this.actividades[index] = {
+          id: parseInt(id),
+          nombre: actividad.nombre,
+          descripcion: actividad.descripcion,
+        };
       }
-  
-      const actualizarActividad = {
-        id: actividadId,
-        nombre,
-        descripcion,
-        habitoId: parseInt(habitoId),
-      };
-      console.log('Actividad actualizada:', actualizarActividad);
-      res.redirect('/actividades');
     }
   
-
-    static delete(req, res) {
-      const actividadId = parseInt(req.params.id); 
-      console.log(`Actividad con ID ${actividadId} eliminada`);
-      res.redirect('/actividades');
+    eliminarActividad(id) {
+      this.actividades = this.actividades.filter(actividad => actividad.id != id);
     }
   }
   

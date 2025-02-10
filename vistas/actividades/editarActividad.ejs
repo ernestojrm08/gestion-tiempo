@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editar Actividad</title>
+  <title>Editar actividad</title>
 </head>
 <body>
-  <h1>Editar Actividad</h1>
-  <form action="/actividades/actualizar/<%= Actividad.id %>" method="POST">
+  <h1>Editar actividad</h1>
+  <form action="/actividades/actualizar/<%= actividad.id %>" method="post">
     <label for="nombre">Nombre:</label>
-    <input type="text" id="name" name="name" value="<%= Actividad.nombre %>" required>
-    <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" name="descripcion" required><%= Actividad.descripcion %></textarea>
-    <label for="habitoId">ID del Hábito:</label>
-    <input type="number" id="habitoId" name="habitoId" value="<%= Actividad.habitoId %>" required>
+    <input type="text" name="nombre" id="nombre" value="<%= actividad.nombre %>">
+    <div>
+    </div>
+    <label for="descripcion">Descripcion</label>
+    <textarea name="descripcion" id="descripcion"><%= actividad.descripcion %></textarea>
+ <div>
     <button type="submit">Actualizar</button>
   </form>
 </body>

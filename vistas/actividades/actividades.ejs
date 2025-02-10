@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Actividades</title>
+  <title>Lista de actividades</title>
 </head>
 <body>
-  <h1>Lista de Actividades</h1>
-  <a href="/actividades/añadir">Agregar Actividad</a>
+  <h1>Lista de actividades</h1>
   <ul>
-    <% actividades.forEach(Actividad => { %>
+    <% actividades.forEach(actividad => { %>
       <li>
-        <%= Actividad.nombre %> - <%= Actividad.descripcion %>
-        <a href="/actividades/editar/<%= Actividad.id %>">Editar</a>
-        <a href="/actividades/eliminar/<%= Actividad.id %>">Eliminar</a>
+        Actividad : <%= actividad.nombre %>
+        <p> Descripcion : <%= actividad.descripcion %></p>
+
+        <a href="/actividades/editar/<%= actividad.id %>">Editar</a>
+        <a href="/actividades/eliminar/<%= actividad.id %>">Eliminar</a>
       </li>
-    <% }) %>
+    <% }); %>
   </ul>
+  <a href="/actividades/agregar">Añadir actividad</a>
 </body>
 </html>

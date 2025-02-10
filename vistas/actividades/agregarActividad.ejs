@@ -7,13 +7,14 @@
 </head>
 <body>
   <h1>Agregar Actividad</h1>
-  <form action="/actividades/crear" method="POST">
+  <form action="/actividades" method="POST">
     <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" nombre="nombre" required>
+    <input type="text" id="nombre" name="nombre" required>
+    <div>
+    </div>
     <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" nombre="descripcion" required></textarea>
-    <label for="habitoId">ID del Hábito:</label>
-    <input type="number" id="habitoId" nombre="habitoId" required>
+    <textarea name="descripcion" id="descripcion" required></textarea>
+    <div>
     <button type="submit">Guardar</button>
   </form>
 </body>
