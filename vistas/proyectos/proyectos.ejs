@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de proyectos</title>
+</head>
+<body>
+  <h1>Lista de proyectos</h1>
+  <ul>
+    <% proyectos.forEach(proyecto => { %>
+      <li>
+        <%= proyecto.nombre %> - <%= proyecto.descripcion %>
+        <a href="/proyectos/editar/<%= proyecto.id %>">Editar</a>
+        <a href="/proyectos/eliminar/<%= proyecto.id %>">Eliminar</a>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/proyectos/agregar">Agregar proyecto</a>
+</body>
+</html>

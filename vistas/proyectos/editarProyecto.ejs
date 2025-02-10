@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editar proyecto</title>
+</head>
+<body>
+  <h1>Editar proyecto</h1>
+  <form action="/proyectos/actualizar/<%= proyecto.id %>" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" value="<%= proyecto.nombre %>" required>
+    <label for="descripcion">Descripción:</label>
+    <textarea name="descripcion" id="descripcion" required><%= proyecto.descripcion %></textarea>
+    <button type="submit">Actualizar</button>
+  </form>
+</body>
+</html>
