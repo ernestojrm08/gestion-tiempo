@@ -1,0 +1,48 @@
+# ⚡ Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log
+package-lock.json
+.pnpm-debug.log*
+
+# ⚡ Logs y archivos temporales
+logs/
+*.log
+debug.log
+error.log
+*.out
+*.pid
+*.seed
+*.csv
+*.tsbuildinfo
+
+# ⚡ Archivos de entorno y configuración sensible
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# ⚡ Caché y archivos temporales
+.tmp/
+dist/
+coverage/
+.cache/
+public/uploads/
+public/temp/
+
+# ⚡ Ignorar archivos de LiveReload y Nodemon
+.livereload
+nodemon-debug.log
+.nodemon.json
+
+# ⚡ Mac y Linux
+.DS_Store
+*.swp
+*~
+
+# ⚡ VS Code y editores de texto
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project

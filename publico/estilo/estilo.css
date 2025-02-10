@@ -1,0 +1,80 @@
+/*  Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+/*  Contenedor Principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/*  Enlaces */
+a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+a:hover {
+    background: #2980b9;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #3498db;
+    color: white;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+/*  Diseño Responsivo */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+}

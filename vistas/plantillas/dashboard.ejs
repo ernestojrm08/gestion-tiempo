@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/stylesheets/estilo.css">
+</head>
+<body>
+
+    <header>
+        <h1>Panel de Control</h1>
+        <nav>
+            <a href="/reports"> Inicio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="actividades">
+            <h2> Últimas Actividades</h2>
+            <% if (actividades.length > 0) { %>
+                <ul>
+                    <% actividades.forEach(actividad => { %>
+                        <li><strong><%= actividad.nombre %></strong> - <%= actividad.duracion %> min</li>
+                    <% }); %>
+                </ul>
+            <% } else { %>
+                <p>No hay actividades recientes.</p>
+            <% } %>
+        </section>
+
+        <section class="categorias">
+            <h2> Categorías</h2>
+            <% if (categorias.length > 0) { %>
+                <ul>
+                    <% categorias.forEach(categoria => { %>
+                        <li> <%= categoria.nombre %></li>
+                    <% }); %>
+                </ul>
+            <% } else { %>
+                <p>No hay categorías disponibles.</p>
+            <% } %>
+        </section>
+    </main>
+
+</body>
+</html>
