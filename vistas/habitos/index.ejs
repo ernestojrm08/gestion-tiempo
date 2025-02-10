@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de hábitos</title>
+</head>
+<body>
+  <h1>Lista de hábitos</h1>
+  <ul>
+    <% habitos.forEach(habito => { %>
+      <li>
+        <%= habito.nombre %>
+        <a href="/habitos/editar/<%= habito.id %>">Editar</a>
+        <a href="/habitos/eliminar/<%= habito.id %>">Eliminar</a>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/habitos/agregar">Agregar hábito</a>
+</body>
+</html>

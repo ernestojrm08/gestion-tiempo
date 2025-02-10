@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editar hábito</title>
+</head>
+<body>
+  <h1>Editar hábito</h1>
+  <form action="/habitos/actualizar/<%= habito.id %>" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" value="<%= habito.nombre %>">
+    <button type="submit">Actualizar</button>
+  </form>
+</body>
+</html>
