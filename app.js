@@ -20,7 +20,28 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+// Servir archivos estáticos (CSS, imágenes, etc.)
+app.use(express.static(__dirname + '/publico'));
+
+// Rutas
+app.get('/index', (req, res) => res.render('index'));  
+
+app.get('/dashboard', async (req, res) => {
+  try {
+    const actividades = await Actividad.findAll({ limit: 5, order: [['id', 'DESC']] });
+    const categorias = await Categoria.findAll();
+    res.render('dashboard', { actividades, categorias });
+  } catch (error) {
+    console.error('Error cargando el dashboard:', error);
+    res.status(500).send('Error interno del servidor');
+  }
+});
+
+app.get('/reports', (req, res) => res.render('reports'));
+
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
