@@ -7,15 +7,19 @@
 </head>
 <body>
   <h1>Lista de Usuarios</h1>
-  <a href="/usuarios/agregar">Agregar Usuario</a>
-  <ul>
-    <% usuarios.forEach(usuario => { %>
-      <li>
-        <%= usuario.nombre %> - <%= usuario.email %>
-        <a href="/usuarios/editar/<%= usuario.id %>">Editar</a>
-        <a href="/usuarios/eliminar/<%= usuario.id %>">Eliminar</a>
-      </li>
-    <% }) %>
-  </ul>
+<a href="/usuarios/agregar" class="btn-agregar">Agregar Usuario</a>
+<ul class="usuario-lista">
+  <% usuarios.forEach(usuario => { %>
+    <li class="usuario-item">
+      <span class="usuario-nombre"><%= usuario.nombre %></span> - 
+      <span class="usuario-email"><%= usuario.email %></span>
+      <div class="usuario-actions">
+        <a href="/usuarios/editar/<%= usuario.id %>" class="btn-editar">Editar</a>
+        <a href="/usuarios/eliminar/<%= usuario.id %>" class="btn-eliminar">Eliminar</a>
+      </div>
+    </li>
+  <% }) %>
+</ul>
+
 </body>
 </html>

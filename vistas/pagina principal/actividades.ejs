@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Gestión de Actividades</title>
+</head>
+<body>
+    <h1>Actividades</h1>
+    <ul>
+        <% for (let actividad of actividades) { %>
+            <li><%= actividad.titulo %> - <%= actividad.descripcion %></li>
+        <% } %>
+    </ul>
+</body>
+</html>

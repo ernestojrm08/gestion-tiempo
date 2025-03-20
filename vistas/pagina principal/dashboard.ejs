@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <p>Resumen de estadísticas</p>
+    <ul>
+        <% for (let stat of estadisticas) { %>
+            <li><%= stat.nombre %>: <%= stat.valor %></li>
+        <% } %>
+    </ul>
+</body>
+</html>

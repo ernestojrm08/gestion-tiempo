@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Gestión de Proyectos</title>
+</head>
+<body>
+    <h1>Proyectos</h1>
+    <ul>
+        <% for (let proyecto of proyectos) { %>
+            <li><%= proyecto.nombre %> - <%= proyecto.estado %></li>
+        <% } %>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Reporte de Tiempo</title>
+</head>
+<body>
+    <h1>Reporte de Tiempo</h1>
+    <ul>
+        <% for (let item of reporte) { %>
+            <li><%= item.actividad %> - <%= item.tiempo %> horas</li>
+        <% } %>
+    </ul>
+</body>
+</html>
