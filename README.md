@@ -22,5 +22,21 @@ npm install
 npm run serve
 ```
 
+Cómo usar la interfaz web
+1. **Abrir la página principal:** `http://localhost:3000`
+2. **Secciones disponibles:**
+   -  **Dashboard:** Muestra estadísticas generales.
+   -  **Usuarios:** CRUD de usuarios.
+   -  **Hábitos y Actividades:** CRUD de hábitos.
+   -  **Proyectos:** CRUD de proyectos.
+   -  **Reporte de Tiempo:** Visualización de tiempos registrados.
+
+## Tecnologías usadas
+- Node.js + Express.js
+- EJS (para las vistas)
+- Fetch API (para consumir la API)
+- CSS (para estilos)
+
+
 La aplicación estará disponible en **http://localhost:3000** o el puerto que hayas configurado.
 

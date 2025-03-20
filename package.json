@@ -4,8 +4,8 @@
   "description": "aplicacion gestion del tiempo",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon app.js"
+    "start": "node src/app.js",
+    "serve": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
