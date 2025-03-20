@@ -34,3 +34,5 @@ router.get('/eliminar/:id', (req, res) => {
 });
 
 module.exports = router;
+
+<script src="/publico/usuarios.js"></script>
